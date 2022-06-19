@@ -1,0 +1,65 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Chat</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+        <style>
+            #onlineUsersSelector {
+                height: 500px;
+                color: #222;
+                background-color: #FFFFFF;
+                text-align: center;
+
+            }
+
+            #chatLog {
+                height: 500px;
+                background-color: #FFFFFF;
+                resize: none;
+                text-align: left;
+            }
+
+            h2{
+                text-align: center;
+            }
+            onlineUsers{
+                margin-left: 50px;
+            }
+            label { 
+                display: block;
+                text-align: center;
+                
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="container mt-3 p-5">
+            <h2>Group Chat</h2>
+            <div class="row">
+                <div class="col-12 col-md-2">
+                    <label for="onlineUsers">Users online</label>
+                    <select multiple class="form-control" id="onlineUsersSelector" disabled>
+                    </select>
+                </div>
+                <div class="col-12 col-md-8">
+                    <div class="mb-2">
+                        <label for="chatLog"> </label>
+                        <textarea class="form-control" id="chatLog" readonly></textarea>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="chatMessageInput" placeholder="Enter your chat message">
+                        <div class="input-group-append">
+                            <button class="btn btn-success" id="chatMessageSend" type="button" style=background-color:#222>Send</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <script src="{% static 'index.js' %}"></script>
+    </body>
+</html>
