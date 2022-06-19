@@ -1,4 +1,4 @@
-# my-game
+# clickerVue
 
 ## Project setup
 ```
